@@ -1,0 +1,13 @@
+:host {
+    width: 100%;
+}
+
+.search-btn::-webkit-search-cancel-button {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    background-image: var(--active-cancel-button);
+    background-size: contain;
+    background-repeat: no-repeat;
+}

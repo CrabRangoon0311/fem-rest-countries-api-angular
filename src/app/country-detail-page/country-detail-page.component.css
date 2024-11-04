@@ -1,0 +1,15 @@
+.country-detail-page {
+    height: 100%;
+    width: 100%;
+    margin-inline: auto;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn-back {
+    padding: 5px 30px;
+    margin-bottom: 50px;
+    max-width: 140px;
+}

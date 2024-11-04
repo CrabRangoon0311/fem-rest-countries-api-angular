@@ -1,0 +1,4 @@
+<div [ngClass]="containerClass()" class="input-container">
+    <magnifying-glass-svg></magnifying-glass-svg>
+    <input type="search" #searchField="ngModel" [placeholder]="placeHolder()" [ngModel]="searchText" autocomplete="off" class="search-btn" />
+</div>

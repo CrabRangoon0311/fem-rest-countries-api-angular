@@ -1,0 +1,44 @@
+:host {
+    width: 100%;
+}
+
+header {
+    background-color: var(--active-element-bg-color);
+    min-height: 8rem;
+    display: flex;
+    justify-content: center;
+    box-shadow: var(--box-shadow);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    width: 100%;
+    margin-inline: auto;
+    margin: 0 2rem;
+    position: relative;
+
+    & h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 800;
+    }
+
+    & button {
+        background: transparent;
+        border: none;
+        font-size: 1.6rem;
+
+        & img {
+            height: 16px;
+            padding-right: 10px;
+        }
+    }
+}
+
+@media screen and (min-width: 1480px) {
+    .header-content {
+        margin: 0;
+    }
+}

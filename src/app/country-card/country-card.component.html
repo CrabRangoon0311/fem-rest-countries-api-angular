@@ -1,0 +1,17 @@
+@if (countryViewModel()) {
+<article class="country-card-container">
+    <img loading="lazy" alt="Country Flag" src={{countryViewModel().flagUrl}} />
+    <div class="card-detail-container">
+        <h3>{{countryViewModel().name}}</h3>
+        <div class="detail-item-container">
+            <p>Population:</p> {{countryViewModel().population}}
+        </div>
+        <div class="detail-item-container">
+            <p>Region:</p> {{countryViewModel().region}}
+        </div>
+        <div class="detail-item-container">
+            <p>Capital:</p> {{countryViewModel().capital}}
+        </div>
+    </div>
+</article>
+}

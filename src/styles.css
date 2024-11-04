@@ -1,0 +1,148 @@
+/* CSS reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+}
+
+/* Page styles */
+
+:root {
+    --dark-mode-elements: hsl(209, 23%, 22%);
+    --dark-mode-background: hsl(207, 26%, 17%);
+    --light-mode-text: hsl(200, 15%, 8%);
+    --light-mode-input: hsl(0, 0%, 52%);
+    --light-mode-background: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --chevron-icon-url: url("./assets/chevron-down-dark.svg");
+    --active-cancel-button: url("./assets/close-dark.svg");
+
+    --active-page-bg-color: var(--dark-mode-background);
+    --active-element-bg-color: var(--dark-mode-elements);
+    --active-text-color: var(--white);
+    --box-shadow: 0 0 4px hsl(209, 23%, 22%);
+
+    --card-container-width: 310px;
+    font-size: 62.5%;
+}
+
+:root[data-theme="light"] {
+    --box-shadow: 0 0 4px hsl(0deg 6.03% 85.07%);
+    --active-page-bg-color: var(--light-mode-background);
+    --active-element-bg-color: var(--white);
+    --active-text-color: var(--light-mode-text);
+    --chevron-icon-url: url("./assets/chevron-down-light.svg");
+    --active-cancel-button: url("./assets/close-light.svg");
+}
+
+input,
+button,
+select {
+    background-color: var(--active-element-bg-color);
+    box-shadow: var(--box-shadow);
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+}
+
+html,
+body {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    min-width: 375px;
+    color: var(--active-text-color);
+    background-color: var(--active-page-bg-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+app-root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    padding-bottom: 20px;
+}
+
+main {
+    padding: 0 2rem;
+    max-width: 1440px;
+    min-width: 375px;
+    width: 100%;
+    margin: 0 4rem;
+}
+
+.detail-item-container {
+    opacity: .8;
+    line-height: 1.6;
+    line-height: 2;
+    font-size: 1.5rem;
+
+    &>p {
+        font-weight: 600;
+        display: inline-block;
+    }
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+
+    & svg {
+        width: 14px;
+        position: absolute;
+        margin-left: 20px;
+        fill: var(--active-text-color);
+    }
+
+    & input {
+        padding: 15px 20px;
+        padding-left: 50px;
+        border: none;
+        border-radius: 5px;
+        width: 100%;
+
+        &::placeholder {
+            color: var(--active-text-color);
+        }
+    }
+}
+
+.btn-with-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    & svg {
+        margin-right: 10px;
+        width: 14px;
+        fill: var(--active-text-color);
+    }
+}
+
+@media screen and (min-width: 1480px) {
+    main {
+        padding: 0;
+    }
+}

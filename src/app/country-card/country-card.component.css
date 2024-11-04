@@ -1,0 +1,26 @@
+.country-card-container {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--card-container-width);
+    background-color: var(--active-element-bg-color);
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+
+    & .card-detail-container {
+        padding: 25px 20px;
+    }
+
+    & h3 {
+        font-weight: 800;
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    & img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        display: block;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+}

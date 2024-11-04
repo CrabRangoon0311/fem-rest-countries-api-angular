@@ -1,0 +1,18 @@
+<div class="country-list-page">
+    <div class="country-list-header">
+        <div class="country-input-filter">
+            <app-search-box [(searchText)]="this.searchText" placeHolder="Search for a country..."></app-search-box>
+        </div>
+        <app-region-filter [selectedRegion]="this.selectedRegion()"></app-region-filter>
+    </div>
+    <div class="country-list-container">
+        @for (country of this.countries(); track country.name) {
+        <a routerLink="/{{country.alpha3Code}}">
+            <app-country-card [country]="country"></app-country-card>
+        </a>
+        }
+        @empty {
+        <h2 *ngIf="hasFilter()">No countries found.</h2>
+        }
+    </div>
+</div>

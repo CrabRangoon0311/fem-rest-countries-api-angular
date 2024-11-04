@@ -1,0 +1,35 @@
+.country-list-page {
+    width: 100%;
+    margin-inline: auto;
+}
+
+.country-list-header {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.country-input-filter {
+    width: 100%;
+}
+
+.country-list-container {
+    display: grid;
+    gap: 6rem;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(var(--card-container-width), 1fr));
+    justify-items: center;
+}
+
+@media only screen and (min-width: 550px) {
+    .country-list-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .country-input-filter {
+        width: 400px;
+    }
+}

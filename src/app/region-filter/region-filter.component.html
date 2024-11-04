@@ -1,0 +1,6 @@
+<select class="region-filter" aria-label="Filter by Region" [(ngModel)]="selectedRegion" autocomplete="off" (change)="handleRegionChange($any($event).target.value)">
+    <option value="">Filter by Region</option>
+    @for (region of allRegions; track region) {
+    <option>{{region}}</option>
+    }
+</select>

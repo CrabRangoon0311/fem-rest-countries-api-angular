@@ -1,0 +1,46 @@
+<div class="country-detail-container" *ngIf="countryDetailModel() != null">
+    <div class="detail-image-container">
+        <img alt="Country Flag" src={{countryDetailModel().flagUrl}} />
+    </div>
+    <div class="country-details">
+        <h2 class="country-detail-title">{{countryDetailModel().name}}</h2>
+        <div class="country-details-item-container">
+            <div>
+                <div class="detail-item-container">
+                    <p>Native Name:</p> {{countryDetailModel().nativeName}}
+                </div>
+                <div class="detail-item-container">
+                    <p>Population:</p> {{countryDetailModel().population}}
+                </div>
+                <div class="detail-item-container">
+                    <p>Region:</p> {{countryDetailModel().region}}
+                </div>
+                <div class="detail-item-container">
+                    <p>Sub Region:</p> {{countryDetailModel().subregion}}
+                </div>
+                <div class="detail-item-container">
+                    <p>Capital:</p> {{countryDetailModel().capital}}
+                </div>
+            </div>
+            <div>
+                <div class="detail-item-container">
+                    <p>Top Level Domain:</p> {{countryDetailModel().topLevelDomains}}
+                </div>
+                <div class="detail-item-container">
+                    <p>Currencies:</p> {{countryDetailModel().currencies}}
+                </div>
+                <div class="detail-item-container">
+                    <p>Languages:</p> {{countryDetailModel().languages}}
+                </div>
+            </div>
+        </div>
+        @if (this.borderCountries.length > 0) {
+        <div class="detail-item-container border-countries-container">
+            <p>Border Countries:</p>
+            @for (bc of borderCountries; track bc.alpha3Code){
+            <a class="btn-border-country" routerLink="/{{bc.alpha3Code}}">{{bc.name}}</a>
+            }
+        </div>
+        }
+    </div>
+</div>
