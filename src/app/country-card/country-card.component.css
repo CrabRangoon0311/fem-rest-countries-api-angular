@@ -5,6 +5,7 @@
     background-color: var(--active-element-bg-color);
     border-radius: 5px;
     box-shadow: var(--box-shadow);
+    height: 100%;
 
     & .card-detail-container {
         padding: 25px 20px;

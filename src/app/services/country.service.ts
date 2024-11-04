@@ -12,7 +12,7 @@ export class CountryService {
   countries: Signal<Country[]> = toSignal(this.countriesSubject, { initialValue: [] });
 
   constructor(private _http: HttpClient) {
-    this._http.get<Country[]>("/data.json").subscribe(res => this.countriesSubject.next(res));
+    this._http.get<Country[]>("data.json").subscribe(res => this.countriesSubject.next(res));
   }
 
   getCountry(alpha3Code: string): Country | undefined {
