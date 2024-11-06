@@ -1,4 +1,4 @@
-import { Component, DestroyRef, EventEmitter, inject, input, Input, Output, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, DestroyRef, EventEmitter, inject, input, Input, Output, ViewChild } from '@angular/core';
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 import { NgModel } from "@angular/forms";
 import { debounceTime, distinctUntilChanged } from "rxjs";
@@ -8,7 +8,7 @@ import { debounceTime, distinctUntilChanged } from "rxjs";
   templateUrl: './search-box.component.html',
   styleUrl: './search-box.component.css'
 })
-export class SearchBoxComponent {
+export class SearchBoxComponent implements AfterViewInit {
   private readonly destroyRef = inject(DestroyRef);
 
   placeHolder = input("");
